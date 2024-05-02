@@ -3,7 +3,7 @@ from model.nerc import Nerc
 from model.powerOutages import Event
 
 
-class DAO():
+class DAO:
     def __init__(self):
         pass
 
@@ -14,7 +14,8 @@ class DAO():
         result = []
 
         cursor = conn.cursor(dictionary=True)
-        query = """ ADD YOUR QUERY """
+        query = """SELECT *
+            FROM nerc"""
 
         cursor.execute(query)
 
@@ -32,7 +33,9 @@ class DAO():
         result = []
 
         cursor = conn.cursor(dictionary=True)
-        query = """ ADD YOUR QUERY """
+        query = """ SELECT *
+            FROM powerOutages 
+            WHERE nerc_id = %s"""
 
         cursor.execute(query, (nerc.id,))
 

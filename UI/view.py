@@ -13,7 +13,7 @@ class View(ft.UserControl):
         self._page.horizontal_alignment = 'CENTER'
         self._page.theme_mode = ft.ThemeMode.LIGHT
         page.window_width = 1000  # window's width is 200 px
-        page.window_height = 1000
+        page.window_height = 700
         page.window_center()
         # controller (it is not initialized. Must be initialized in the main, after the controller is created)
         self._controller = None
